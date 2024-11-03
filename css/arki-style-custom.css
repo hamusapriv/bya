@@ -702,6 +702,7 @@ body.arki-full .arki-fixed-footer {
     width: calc(100% - 20px - 20px);
 }
 
+/*
 .arki-container,
 .gdlr-core-container,
 body.arki-boxed .arki-body-wrapper,
@@ -709,6 +710,7 @@ body.arki-boxed .arki-fixed-footer .arki-footer-wrapper,
 body.arki-boxed .arki-fixed-footer .arki-copyright-wrapper {
     max-width: 1320px;
 }
+    */
 
 .arki-body-front .gdlr-core-container,
 .arki-body-front .arki-container {
@@ -893,14 +895,9 @@ body.arki-boxed .arki-fixed-footer .arki-copyright-wrapper {
     padding-top: 30px;
 }
 
-.arki-header-style-plain {
-    box-shadow: 0px 0px 20px rgba(10, 10, 10, 0.1);
-    -webkit-box-shadow: 0px 0px 20px rgba(10, 10, 10, 0.1);
-    -moz-box-shadow: 0px 0px 20px rgba(10, 10, 10, 0.1);
-}
 
 .arki-logo {
-    padding-top: 45px;
+    padding-top: 25px;
 }
 
 .arki-logo {
@@ -1489,7 +1486,7 @@ body.single-product .arki-header-background-transparent {
 
 .sf-menu>li>a,
 .sf-vertical>li>a {
-    color: #939393;
+    color: #000000;
 }
 
 .sf-menu>li>a:hover,
@@ -1498,7 +1495,7 @@ body.single-product .arki-header-background-transparent {
 .sf-vertical>li>a:hover,
 .sf-vertical>li.current-menu-item>a,
 .sf-vertical>li.current-menu-ancestor>a {
-    color: #474747;
+    color: #000000;
 }
 
 .sf-menu>.arki-normal-menu li,
@@ -5555,13 +5552,13 @@ del span.woocommerce-Price-amount.amount {
     -moz-box-shadow: 0px 0px rgba(0, 0, 0, 0.1);
 }
 
-.page-id-14323 .arki-logo {
+/* .page-id-14323 .arki-logo {
     padding-top: 45px;
-}
+} */
 
-.page-id-14323 .arki-logo {
+/* .page-id-14323 .arki-logo {
     padding-bottom: 50px;
-}
+} */
 
 .page-id-14323 .arki-logo.arki-item-pdlr {
     padding-left: 20px;
@@ -15495,4 +15492,63 @@ body.page-id-13724.single-product .arki-header-background-transparent {
 #a_49d4_4 {
     color: #cccccc;
     margin-right: 30px;
+}
+
+.arki-navigation .sf-menu {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.arki-main-menu.sf-js-enabled.sf-arrows {
+    backdrop-filter: blur(10px);
+    padding: 0;
+}
+
+
+.prism-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: black;
+
+}
+
+.static-text {
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 8px;
+    /* Space between static and rotating text */
+}
+
+.rotating-text {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    /* Adjust to fit the rotating text */
+    height: 68px;
+    /* Match the text size */
+    margin-left: 6px;
+}
+
+.text {
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#architecture {
+    transform: translateY(0);
+    /* Starting position */
+    opacity: 1;
+}
+
+#visualisation {
+    transform: translateY(100%);
+    /* Start below the container */
 }

@@ -132,16 +132,53 @@
             <!-- header -->
 
 
-            <div style="width: 100vw; height: 100vh; " class="arki-page-wrapper" id="arki-page-wrapper">
-                <video style="height: 100%; width: 100%; object-fit: cover;" src="/images/bya-hero.mp4" plays-inline
-                    autoplay muted loop></video>
+            <div style="width: 100vw; height: 100vh;" class="arki-page-wrapper" id="arki-page-wrapper">
+                <video style="height: 100%; width: 100%; object-fit: cover;" playsinline autoplay muted loop>
+                    <source src="/images/bya-hero.webm" type="video/webm">
+                    <source src="/images/bya-hero.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
+
+            <div class="prism-container">
+                <span class="static-text">Berkay Yıldız</span>
+                <div class="rotating-text">
+                    <span class="text" id="architecture">Architecture</span>
+                    <span class="text" id="visualisation">Visualisation</span>
+                </div>
+            </div>
+
+
+
+
 
 
         </div>
     </div>
 
+    <script>
+        let isArchitecture = true;
+        const architectureText = document.getElementById("architecture");
+        const visualisationText = document.getElementById("visualisation");
 
+        function toggleText() {
+            if (isArchitecture) {
+                architectureText.style.transform = "translateY(-100%)";
+                architectureText.style.opacity = "0";
+                visualisationText.style.transform = "translateY(0)";
+                visualisationText.style.opacity = "1";
+            } else {
+                architectureText.style.transform = "translateY(0)";
+                architectureText.style.opacity = "1";
+                visualisationText.style.transform = "translateY(100%)";
+                visualisationText.style.opacity = "0";
+            }
+            isArchitecture = !isArchitecture;
+        }
+
+        // Set the toggle to happen every 3 seconds (3000 milliseconds)
+        setInterval(toggleText, 3000);
+    </script>
 
     <script type="text/javascript" src="js/jquery.min.js" id="jquery-core-js"></script>
     <script type="text/javascript" src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
