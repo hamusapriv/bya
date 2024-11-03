@@ -2771,11 +2771,6 @@ html.mm-opened body.admin-bar .arki-header-side-nav {
 	-webkit-transition: max-width 200ms;
 }
 
-.arki-logo-inner img {
-	width: 100%;
-	/* for ie */
-}
-
 .arki-fixed-nav-logo {
 	display: none;
 }
