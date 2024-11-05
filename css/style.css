@@ -1,0 +1,42 @@
+.prism-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.static-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 8px;
+    /* Space between static and rotating text */
+}
+
+.rotating-text {
+    position: relative;
+    overflow: hidden;
+    width: 150px;
+    /* Adjust to fit the rotating text */
+    height: 30px;
+    /* Match the text size */
+}
+
+.text {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#architecture {
+    transform: translateY(0);
+    /* Starting position */
+    opacity: 1;
+}
+
+#visualisation {
+    transform: translateY(100%);
+    /* Start below the container */
+}
