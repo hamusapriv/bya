@@ -4,17 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>B Y Arch</title>
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-    <script src="/js/script.js" defer></script>
-
+    <script src="/js/script.js" defer></script> <!-- Include your main script.js file -->
+    <script src="/js/navbar.js" defer></script> <!-- Load the navbar component script -->
 </head>
+
 
 <body>
 
+    <div id="navbar-placeholder"></div> <!-- Placeholder for the navbar -->
+
     <section class="home-section">
-        <div style="width: 100dvw; height: 100dvh;">
-            <video style="height: 100%; width: 100%; object-fit: cover;" playsinline autoplay muted loop>
+        <div class="home-video-container">
+            <video class="home-video" playsinline autoplay muted loop>
                 <source src="/images/bya-hero.webm" type="video/webm">
                 <source src="/images/bya-hero.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -30,14 +33,6 @@
         </div>
     </section>
 
-
-
-
-
-
-
-
 </body>
-
 
 </html>
