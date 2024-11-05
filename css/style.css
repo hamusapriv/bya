@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Jost", sans-serif;
 }
 
 body {
@@ -193,9 +194,9 @@ section {
 
 /* SERVICES CSS */
 .services-section {
-    width: 70%;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 15%;
 }
 
 .service {
