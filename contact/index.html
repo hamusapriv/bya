@@ -21,10 +21,90 @@
     <div id="navbar-placeholder"></div> <!-- Placeholder for the navbar -->
 
     <section class="contact-section">
+        <div class="contact-upper">
+            <h3 class="contact-h3">Contact Us</h3>
+            <p class="contact-p">Get In Touch</p>
+        </div>
+        <div class="contact-lower">
+            <div></div>
+            <div class="contact-info">
+                <img class="contact-icon" src="/images/phone-icon.png" alt="">
+                <h3>Phone</h3>
+                <div class="contact-divider"></div>
+                <p><a href="tel:+905071860835">+90 507 186 0835</a></p>
+            </div>
+            <div class="contact-info">
+                <img class="contact-icon" src="/images/mail-icon.png" alt="">
+                <h3>Email</h3>
+                <div class="contact-divider"></div>
+                <p><a href="mailto:info@berkayyildizmimarlik.com">info@berkayyildizmimarlik.com</a></p>
+            </div>
+            <div class="contact-info">
+                <img class="contact-icon" src="/images/location-icon.png" alt="">
+                <h3>Location</h3>
+                <div class="contact-divider"></div>
+                <p>
+                    <a href="https://www.google.com/maps?q=Mansuroğlu+Mah.+286/3+Sk.+No:+14/B+Bayraklı/İzmir"
+                        target="_blank" rel="noopener noreferrer">
+                        Mansuroğlu Mah. 286/3 Sk. No: 14/B <br>
+                        Bayraklı/İzmir
+                    </a>
+                </p>
+            </div>
+            <div></div>
+        </div>
+    </section>
 
+    <section class="contact-form-section">
+        <h1>Leave us your info</h1>
+        <p>and we will get back to you.</p>
+        <form class="contact-form" id="contact-form"
+            action="https://script.google.com/macros/s/AKfycbzSY6KGQUZPVHACDmWpTNpug6Fjj623AVZ22FhRk7xEcxXXcGTDUCsNGaJ5I6Ldal-NUw/exec"
+            method="POST">
+            <input type="text" name="name" placeholder="Name:" required>
+            <input type="text" name="city" placeholder="City:" required>
+            <input type="email" name="email" placeholder="Email:" required>
+            <textarea name="message" placeholder="Message:" rows="5" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
 
     </section>
+
+
     <div id="footer-placeholder"></div>
+
+    <script>
+
+        document.getElementById("contact-form").addEventListener("submit", async function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            // Add the secret key to the form data
+            formData.append("secret", "myUniqueKey12"); // Test with a mismatched key for debugging
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: formData,
+                });
+                const result = await response.json();
+                if (result.result === "success") {
+                    alert("Thank you! Your form has been submitted.");
+                    form.reset(); // Clear the form
+                } else {
+                    alert(result.message || "There was an error submitting the form.");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("There was an error submitting the form.");
+            }
+        });
+
+
+    </script>
+
 
 </body>
 
