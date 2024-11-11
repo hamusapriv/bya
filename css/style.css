@@ -180,7 +180,15 @@ section {
 .works-section {
     margin-left: auto;
     margin-right: auto;
-    padding: 200px 15% 0 15%;
+    padding: 0px 15% 0px 15%;
+    margin-top: 180px;
+    position: relative;
+
+}
+
+.about-section {
+    padding-bottom: 100px;
+    height: calc(100vh - 180px);
 }
 
 .service {
@@ -189,7 +197,7 @@ section {
     justify-content: flex-start;
     align-items: center;
     gap: 24px;
-    width: 300px;
+    width: 20vw;
     position: relative;
 }
 
@@ -202,8 +210,7 @@ section {
 }
 
 .service-image-wrapper {
-    width: 300px;
-    height: 300px;
+    width: 20vw;
 }
 
 .service-image {
@@ -246,7 +253,7 @@ section {
     width: 100vw;
     position: absolute;
     height: 1px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: -1;
 }
 
@@ -256,7 +263,7 @@ section {
 
 .horizontal-line.line2 {
     left: 0;
-    top: 299px;
+    top: calc(20vw + 5px);
 }
 
 .horizontal-line.upper-line {
@@ -311,9 +318,6 @@ section {
     gap: 00px;
 }
 
-.about-section {
-    height: 100vh;
-}
 
 .about-bg-lines {
     display: flex;
@@ -328,7 +332,7 @@ section {
 
 .about-bg-line {
     width: 1px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .about-left-column {
@@ -373,4 +377,71 @@ section {
 
 .circle.about {
     position: static;
+}
+
+
+.contact-footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 10%;
+}
+
+.contact,
+.follow-us {
+    text-align: left;
+}
+
+.contact h3,
+.follow-us h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    margin: 5px 0;
+}
+
+.contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.follow-us a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.follow-us a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.follow-us a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    border-top: 1px solid gray;
+    padding-top: 10px;
 }
