@@ -183,7 +183,7 @@ section {
     padding: 0px 15% 0px 15%;
     margin-top: 180px;
     position: relative;
-
+    min-height: calc(100vh - 180px);
 }
 
 .about-section {
