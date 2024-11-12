@@ -54,30 +54,6 @@ section {
     /* Required for ::after positioning */
 }
 
-/* Moving Underline */
-.navbar-links::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: var(--hover-left, 0);
-    /* Dynamically updated */
-    height: 2px;
-    background-color: #000;
-    /* Underline color */
-    width: var(--hover-width, 0);
-    /* Dynamically updated */
-    transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
-}
-
-
-
-/* Adjust underline on hover or active states */
-.navbar-links a:hover~.navbar-links::after,
-.navbar-links a.active~.navbar-links::after {
-    left: var(--hover-left, 0);
-    width: var(--hover-width, 0);
-}
-
 .navbar-links li {
     margin-left: 1.5rem;
 }
@@ -96,6 +72,28 @@ section {
     color: inherit;
 }
 
+/* Moving underline for larger screens */
+@media (min-width: 768px) {
+    .navbar-links::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: var(--hover-left, 0);
+        height: 2px;
+        background-color: #000;
+        width: var(--hover-width, 0);
+        transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+    }
+
+    /* Hover and active underline adjustments */
+    .navbar-links a:hover~.navbar-links::after,
+    .navbar-links a.active~.navbar-links::after {
+        left: var(--hover-left, 0);
+        width: var(--hover-width, 0);
+    }
+}
+
+
 /* Hamburger Icon for Mobile */
 .navbar-toggle {
     display: none;
@@ -105,14 +103,91 @@ section {
     border: none;
     cursor: pointer;
     z-index: 11;
+    position: relative;
 }
 
 .navbar-toggle span {
     display: block;
     width: 25px;
     height: 3px;
+    background-color: #000;
+    transition: all 0.3s ease;
+}
+
+/* Transform to "X" when menu is open */
+.navbar-toggle.open span:nth-child(1) {
+    transform: rotate(45deg);
+    transform-origin: center;
     background-color: #fff;
-    transition: background-color 0.3s ease;
+    /* Change color to white */
+    position: relative;
+    top: 8px;
+}
+
+.navbar-toggle.open span:nth-child(2) {
+    opacity: 0;
+    /* Hide the middle bar */
+}
+
+.navbar-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    transform-origin: center;
+    background-color: #fff;
+    /* Change color to white */
+    position: relative;
+    top: -8px;
+}
+
+
+
+
+/* Change text color for mobile screens */
+@media (max-width: 768px) {
+
+    .navbar-links a:hover,
+    .navbar-links a.active {
+        color: #fff;
+        /* Example color for hover/active state */
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 1rem;
+        margin-left: auto;
+    }
+
+    .navbar-links a {
+        color: #ffffff50;
+    }
+
+    .navbar-links li {
+        margin: 0;
+    }
+
+    .navbar-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        padding: 1rem 2rem;
+        height: auto;
+        transform: translateX(100%);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-menu.open {
+        transform: translateX(0);
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
 }
 
 /* Language Buttons */
@@ -131,34 +206,9 @@ section {
     opacity: 1;
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
-    .navbar-links {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .navbar-links li {
-        margin: 0;
-    }
-
-    .navbar-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: rgba(51, 51, 51, 0.9);
-        padding: 1rem 2rem;
-    }
-
-    .navbar-menu.open {
-        display: flex;
-    }
-
-    .navbar-toggle {
-        display: flex;
+    .language-buttons {
+        color: #696969;
     }
 }
 
@@ -587,6 +637,9 @@ section {
 .contact-form button:hover {
     background-color: #333;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {}
 
 
 
