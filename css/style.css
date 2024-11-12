@@ -677,13 +677,14 @@ section {
     }
 
     .contact-icon {
-        width: 40px;
+        width: 30px;
         margin: 0 0 0 auto;
     }
 
     .contact-info h3 {
         margin: 0 auto 0 12px;
         font-size: 20px;
+        font-weight: 700;
     }
 
     .contact-info p a {
