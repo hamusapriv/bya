@@ -144,6 +144,10 @@ section {
 /* Change text color for mobile screens */
 @media (max-width: 768px) {
 
+    .navbar {
+        align-items: center;
+    }
+
     .navbar-links a:hover,
     .navbar-links a.active {
         color: #fff;
@@ -223,6 +227,24 @@ section {
     z-index: 1;
 }
 
+
+
+@media (max-width: 768px) {
+    .prism-container {
+        margin: auto;
+        width: 80%;
+        left: 0;
+        top: auto;
+        bottom: 20%;
+        right: 0;
+    }
+
+    .toggling-text {
+        width: 100%;
+        height: auto;
+    }
+}
+
 /* SERVICES CSS */
 .services-section,
 .about-section,
@@ -262,6 +284,7 @@ section {
 
 .service-image-wrapper {
     width: 20vw;
+    height: 20vw;
 }
 
 .service-image {
@@ -281,6 +304,25 @@ section {
     font-size: 20px;
     line-height: 1.3rem;
 }
+
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .service,
+    .service-image-wrapper {
+        width: auto;
+        height: auto;
+    }
+
+    .service {
+        margin-bottom: 50px;
+    }
+}
+
+
+
 
 .home-video-container {
     position: fixed;
@@ -308,13 +350,19 @@ section {
     z-index: -1;
 }
 
+@media (max-width: 768px) {
+    .horizontal-line {
+        display: none;
+    }
+}
+
 .horizontal-line.line1 {
     right: 0;
 }
 
 .horizontal-line.line2 {
     left: 0;
-    top: calc(20vw + 5px);
+    top: calc(20vw - 1px);
 }
 
 .horizontal-line.upper-line {
