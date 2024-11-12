@@ -144,6 +144,10 @@ section {
 /* Change text color for mobile screens */
 @media (max-width: 768px) {
 
+    .navbar img {
+        width: 70px;
+    }
+
     .navbar {
         align-items: center;
     }
@@ -235,7 +239,7 @@ section {
         width: 80%;
         left: 0;
         top: auto;
-        bottom: 20%;
+        bottom: 40px;
         right: 0;
     }
 
