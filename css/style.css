@@ -326,6 +326,7 @@ section {
 
     .services-section {
         padding: 0 10%;
+        margin-top: 140px;
     }
 
     .service-image {
@@ -497,15 +498,22 @@ section {
         justify-content: center;
         align-items: center;
         gap: 00px;
+        padding-bottom: 30px;
     }
 
     .about-section {
         height: auto;
+        padding: 0 10%;
+        margin-top: 140px;
     }
 
     .about-p {
         width: auto;
         margin-top: 20px;
+    }
+
+    .about-left-column {
+        white-space: normal;
     }
 }
 
@@ -860,5 +868,11 @@ section {
 @media (max-width: 1024px) {
     .works-section {
         padding: 0px 5% 0px 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .works-section {
+        margin-top: 140px;
     }
 }
