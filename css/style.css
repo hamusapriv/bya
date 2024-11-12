@@ -238,8 +238,8 @@ section {
         margin: auto;
         width: 80%;
         left: 0;
-        top: auto;
-        bottom: 40px;
+        top: 0;
+        bottom: 0;
         right: 0;
     }
 
@@ -619,8 +619,7 @@ section {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    height: 300px;
-    background-size: 100% auto;
+    background-size: 100% 100%;
     background-position: center;
 
 }
@@ -630,8 +629,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 40px;
-    height: 300px;
-    background-size: 100% auto;
+    background-size: 100% 100%;
     background-position: center;
 }
 
@@ -641,11 +639,50 @@ section {
 }
 
 .contact-section {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
     margin-left: auto;
     margin-right: auto;
     margin-top: 180px;
     position: relative;
     min-height: calc(100vh - 180px);
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        margin-top: 140px;
+        min-height: calc(100vh - 140px);
+    }
+
+    .contact-lower {
+        grid-template-columns: auto;
+
+    }
+
+    .contact-info {
+        grid-template-columns: 80px 1fr 1px 2fr;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .contact-divider {
+        margin: 0 auto;
+        width: 2px;
+        height: 100%;
+        background-color: transparent;
+    }
+
+    .contact-icon {
+        width: 40px;
+        margin: 0 0 0 auto;
+    }
+
+    .contact-info h3 {
+        margin: 0 auto 0 10px;
+    }
 }
 
 
