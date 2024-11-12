@@ -510,6 +510,13 @@ section {
     padding: 20px 10%;
 }
 
+@media (max-width: 768px) {
+    .footer-container {
+        gap: 0;
+        justify-content: space-around;
+    }
+}
+
 .contact,
 .follow-us {
     text-align: left;
