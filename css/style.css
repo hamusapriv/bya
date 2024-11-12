@@ -647,7 +647,7 @@ section {
 
 .works-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     margin: 20px;
 }
@@ -701,7 +701,7 @@ section {
 }
 
 
-@media (max-width: 965px) {
+@media (max-width: 768px) {
     .work-name {
         display: flex;
         flex-direction: column;
@@ -715,6 +715,15 @@ section {
         transform: translateY(0);
         transition: all 0.3s ease-in-out;
         color: black;
+    }
 
+    .works-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .works-section {
+        padding: 0px 5% 0px 5%;
     }
 }
