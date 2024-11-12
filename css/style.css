@@ -487,6 +487,28 @@ section {
     margin-top: 150px;
 }
 
+@media (max-width: 768px) {
+    .about-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: center;
+        gap: 00px;
+    }
+
+    .about-section {
+        height: auto;
+    }
+
+    .about-p {
+        width: auto;
+        margin-top: 20px;
+    }
+}
+
 .circle.about {
     position: static;
 }
