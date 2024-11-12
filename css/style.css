@@ -514,6 +514,7 @@ section {
     .footer-container {
         gap: 0;
         justify-content: space-around;
+        padding: 0;
     }
 }
 
