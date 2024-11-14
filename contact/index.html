@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../css/style.css" type="text/css" media="all" />
     <link rel="icon" type="image/x-icon" href="../images/fav-icon.png">
 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
     <script src="../js/script.js" defer></script>
     <script src="../js/navbar.js" defer></script>
     <script src="../js/footer.js" defer></script>
@@ -46,9 +48,9 @@
                 <h3>Location</h3>
                 <div class="contact-divider"></div>
                 <p>
-                    <a href="https://www.google.com/maps?q=Mansuroğlu+Mah.+286/3+Sk.+No:+14/B+Bayraklı/İzmir"
+                    <a href="https://www.google.com/maps?q=Mansuroğlu+Mah.+286/3+Sk.+No:+14B+Bayraklı/İzmir"
                         target="_blank" rel="noopener noreferrer">
-                        Mansuroğlu Mah. 286/3 Sk. No: 14/B <br>
+                        Mansuroğlu Mah. 286/3 Sk. No: 14B <br>
                         Bayraklı/İzmir
                     </a>
                 </p>
@@ -56,21 +58,29 @@
             <div></div>
         </div>
     </section>
+    <div class="contact-form-map">
 
-    <section class="contact-form-section">
-        <h1>Leave us your info</h1>
-        <p>and we will get back to you.</p>
-        <form class="contact-form" id="contact-form"
-            action="https://script.google.com/macros/s/AKfycbwZ7RPa_1lMmnNPWIcd2xkYwXbkQX_1IJM9GXcNKAaO3m6YnIonwHIo4u-j1G_5Pa8HzA/exec"
-            method="POST">
-            <input type="text" name="name" placeholder="Name:" required>
-            <input type="text" name="city" placeholder="City:" required>
-            <input type="email" name="email" placeholder="Email:" required>
-            <textarea name="message" placeholder="Message:" rows="5" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
+        <section class="contact-form-section">
+            <h1>Leave us your info</h1>
+            <p>and we will get back to you.</p>
+            <form class="contact-form" id="contact-form"
+                action="https://script.google.com/macros/s/AKfycbwZ7RPa_1lMmnNPWIcd2xkYwXbkQX_1IJM9GXcNKAaO3m6YnIonwHIo4u-j1G_5Pa8HzA/exec"
+                method="POST">
+                <input type="text" name="name" placeholder="Name:" required>
+                <input type="text" name="city" placeholder="City:" required>
+                <input type="email" name="email" placeholder="Email:" required>
+                <textarea name="message" placeholder="Message:" rows="5" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
 
-    </section>
+        </section>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4471.201935008622!2d27.18324967591557!3d38.45180657182265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b962b1e8a579f7%3A0x6b490593d986107a!2zTWFuc3Vyb8SfbHUsIDI4Ni8zLiBTay4gTm86MTQgRDpiLCAzNTUzNSBCYXlyYWtsxLEvxLB6bWly!5e1!3m2!1sen!2str!4v1731596696726!5m2!1sen!2str"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+
 
 
     <div id="footer-placeholder"></div>
@@ -106,7 +116,6 @@
 
 
     </script>
-
 
 </body>
 

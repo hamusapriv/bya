@@ -21,7 +21,7 @@ section {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 40px 60px;
+    padding: 40px 40px;
     position: absolute;
     top: 0;
     left: 0;
@@ -235,12 +235,10 @@ section {
 
 @media (max-width: 768px) {
     .prism-container {
-        margin: auto;
-        width: 80%;
-        left: 0;
+        left: 40px;
         top: 0;
         bottom: 0;
-        right: 0;
+        right: 40px;
     }
 
     .toggling-text {
@@ -666,7 +664,7 @@ section {
 
 .contact-icon {
     width: 60px;
-    margin: auto;
+    margin: auto auto 20px auto;
 }
 
 .contact-section {
@@ -692,33 +690,34 @@ section {
     }
 
     .contact-info {
-        grid-template-columns: 80px 1fr 1px 2fr;
-        grid-template-rows: 1fr;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-content: center;
         align-items: center;
     }
 
+
     .contact-divider {
-        margin: 0 auto;
-        width: 2px;
-        height: 100%;
-        background-color: transparent;
+        height: 2px;
+        margin: 10px;
     }
 
-    .contact-icon {
+    /*.contact-icon {
         width: 30px;
         margin: 0 0 0 auto;
-    }
+    }*/
 
     .contact-info h3 {
-        margin: 0 auto 0 12px;
         font-size: 20px;
         font-weight: 700;
     }
 
     .contact-info p a {
         font-size: 16px;
+    }
+
+    .contact-form-map {
+        flex-direction: column;
     }
 }
 
@@ -781,9 +780,17 @@ section {
     background-color: #333;
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {}
+.contact-form-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
 
+#map {
+    height: 500px;
+    width: 100%;
+}
 
 
 /* Works Css */
