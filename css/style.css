@@ -648,18 +648,23 @@ section {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-size: 100% 100%;
     background-position: center;
-
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Ensures the background fills the container */
+    object-fit: cover;
+    /* For additional consistency across browsers */
 }
+
 
 .contact-lower {
     background-image: url("/images/contact-lower-bg.jpg");
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 40px;
-    background-size: 100% 100%;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .contact-icon {
@@ -686,6 +691,11 @@ section {
 
     .contact-lower {
         grid-template-columns: auto;
+
+    }
+
+    .contact-upper {
+        background-size: auto;
 
     }
 
