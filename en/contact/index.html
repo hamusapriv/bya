@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Berkay Yıldız Architecture</title>
+    <meta name="description"
+        content="Get in touch with Berkay Yıldız Architecture for inquiries, collaborations, and consultations. We’re here to bring your vision to life.">
+    <meta property="og:title" content="Contact Us | Berkay Yıldız Architecture">
+    <meta property="og:description"
+        content="Get in touch with Berkay Yıldız Architecture for inquiries, collaborations, and consultations. We’re here to bring your vision to life.">
+    <meta property="og:image" content="https://berkayyildizmimarlik.com/images/contact-banner.jpg">
+    <meta property="og:url" content="https://berkayyildizmimarlik.com/contact">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us | Berkay Yıldız Architecture">
+    <meta name="twitter:description"
+        content="Get in touch with Berkay Yıldız Architecture for inquiries, collaborations, and consultations. We’re here to bring your vision to life.">
+    <meta name="twitter:image" content="https://berkayyildizmimarlik.com/images/contact-banner.jpg">
+
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" media="all" />
+    <link rel="icon" type="image/png" href="../../images/fav-icon.png" sizes="32x32">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <script src="../js/script.js" defer></script>
+    <script src="../js/navbar.js" defer></script>
+    <script src="../js/footer.js" defer></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JCX6EMK0LB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JCX6EMK0LB');
+    </script>
+</head>
+
+<body>
+
+    <div id="navbar-placeholder"></div> <!-- Placeholder for the navbar -->
+
+    <section class="contact-section">
+        <div class="contact-upper">
+            <h3 class="contact-h3">Contact Us</h3>
+            <p class="contact-p">Get In Touch</p>
+        </div>
+        <div class="contact-lower">
+            <div></div>
+            <div class="contact-info">
+                <img class="contact-icon" src="/images/phone-icon.png" alt="Phone icon for contact" loading="lazy">
+                <h3>Phone</h3>
+                <div class="contact-divider"></div>
+                <p><a href="tel:+905071860835">+90 507 186 0835</a></p>
+            </div>
+            <div class="contact-info">
+                <img class="contact-icon" src="/images/mail-icon.png" alt="Mail icon for contact" loading="lazy">
+                <h3>Email</h3>
+                <div class="contact-divider"></div>
+                <p><a href="mailto:info@berkayyildizmimarlik.com">info@berkayyildizmimarlik.com</a></p>
+            </div>
+            <div class="contact-info">
+                <img class="contact-icon" src="/images/location-icon.png" alt="Location icon for contact"
+                    loading="lazy">
+                <h3>Location</h3>
+                <div class="contact-divider"></div>
+                <p>
+                    <a href="https://www.google.com/maps?q=Mansuroğlu+Mah.+286/3+Sk.+No:+14B+Bayraklı/İzmir"
+                        target="_blank" rel="noopener noreferrer">
+                        Mansuroğlu Mah. 286/3 Sk. No: 14/B <br>
+                        Bayraklı/İzmir
+                    </a>
+                </p>
+            </div>
+            <div></div>
+        </div>
+    </section>
+    <div class="contact-form-map">
+
+        <section class="contact-form-section">
+            <h1>Leave us your info</h1>
+            <p>and we will get back to you.</p>
+            <form class="contact-form" id="contact-form"
+                action="https://script.google.com/macros/s/AKfycbwZ7RPa_1lMmnNPWIcd2xkYwXbkQX_1IJM9GXcNKAaO3m6YnIonwHIo4u-j1G_5Pa8HzA/exec"
+                method="POST">
+                <input type="text" name="name" placeholder="Name:" required>
+                <input type="text" name="city" placeholder="City:" required>
+                <input type="email" name="email" placeholder="Email:" required>
+                <textarea name="message" placeholder="Message:" rows="5" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+
+        </section>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4471.227396923728!2d27.184762775915434!3d38.45139567182262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b962b1964e4561%3A0x394a5d0be973271a!2zTWFuc3Vyb8SfbHUsIDI4Ni8zLiBTay4gMTRCLCAzNTUzNSBCYXlyYWtsxLEvxLB6bWly!5e1!3m2!1sen!2str!4v1731597389087!5m2!1sen!2str"
+            width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+    </div>
+
+
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+
+        document.getElementById("contact-form").addEventListener("submit", async function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            // Add the secret key to the form data
+            formData.append("secret", "myUniqueKey123"); // Test with a mismatched key for debugging
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: formData,
+                });
+                const result = await response.json();
+                if (result.result === "success") {
+                    alert("Thank you! Your form has been submitted.");
+                    form.reset(); // Clear the form
+                } else {
+                    alert(result.message || "There was an error submitting the form.");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("There was an error submitting the form.");
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>
