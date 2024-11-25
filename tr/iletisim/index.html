@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact | Berkay Yıldız Architecture</title>
+    <title>İletişim | Berkay Yıldız Mimarlık</title>
     <meta name="description"
-        content="Get in touch with Berkay Yıldız Architecture for inquiries, collaborations, and consultations. We’re here to bring your vision to life.">
-    <meta property="og:title" content="Contact Us | Berkay Yıldız Architecture">
+        content="Berkay Yıldız Mimarlık ile iletişime geçin. Sorular, iş birlikleri ve danışmanlıklar için buradayız. Hayalinizi gerçeğe dönüştürelim.">
+    <meta property="og:title" content="İletişim | Berkay Yıldız Mimarlık">
     <meta property="og:description"
-        content="Get in touch with Berkay Yıldız Architecture for inquiries, collaborations, and consultations. We’re here to bring your vision to life.">
+        content="Berkay Yıldız Mimarlık ile iletişime geçin. Sorular, iş birlikleri ve danışmanlıklar için buradayız. Hayalinizi gerçeğe dönüştürelim.">
     <meta property="og:image" content="https://berkayyildizmimarlik.com/images/contact-banner.jpg">
-    <meta property="og:url" content="https://berkayyildizmimarlik.com/contact">
+    <meta property="og:url" content="https://berkayyildizmimarlik.com/tr/iletisim">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact Us | Berkay Yıldız Architecture">
+    <meta name="twitter:title" content="İletişim | Berkay Yıldız Mimarlık">
     <meta name="twitter:description"
-        content="Get in touch with Berkay Yıldız Architecture for inquiries, collaborations, and consultations. We’re here to bring your vision to life.">
+        content="Berkay Yıldız Mimarlık ile iletişime geçin. Sorular, iş birlikleri ve danışmanlıklar için buradayız. Hayalinizi gerçeğe dönüştürelim.">
     <meta name="twitter:image" content="https://berkayyildizmimarlik.com/images/contact-banner.jpg">
 
     <link rel="stylesheet" href="../../css/style.css" type="text/css" media="all" />
@@ -46,31 +46,30 @@
 
 <body>
 
-    <div id="navbar-placeholder"></div> <!-- Placeholder for the navbar -->
+    <div id="navbar-placeholder"></div> <!-- Navbar yer tutucu -->
 
     <section class="contact-section">
         <div class="contact-upper">
-            <h3 class="contact-h3">Contact Us</h3>
-            <p class="contact-p">Get In Touch</p>
+            <h3 class="contact-h3">Bizimle İletişime Geçin</h3>
+            <p class="contact-p">Bağlantıda Kalın</p>
         </div>
         <div class="contact-lower">
             <div></div>
             <div class="contact-info">
-                <img class="contact-icon" src="/images/phone-icon.png" alt="Phone icon for contact" loading="lazy">
-                <h3>Phone</h3>
+                <img class="contact-icon" src="/images/phone-icon.png" alt="Telefon ikonu" loading="lazy">
+                <h3>Telefon</h3>
                 <div class="contact-divider"></div>
                 <p><a href="tel:+905071860835">+90 507 186 0835</a></p>
             </div>
             <div class="contact-info">
-                <img class="contact-icon" src="/images/mail-icon.png" alt="Mail icon for contact" loading="lazy">
-                <h3>Email</h3>
+                <img class="contact-icon" src="/images/mail-icon.png" alt="E-posta ikonu" loading="lazy">
+                <h3>E-posta</h3>
                 <div class="contact-divider"></div>
                 <p><a href="mailto:info@berkayyildizmimarlik.com">info@berkayyildizmimarlik.com</a></p>
             </div>
             <div class="contact-info">
-                <img class="contact-icon" src="/images/location-icon.png" alt="Location icon for contact"
-                    loading="lazy">
-                <h3>Location</h3>
+                <img class="contact-icon" src="/images/location-icon.png" alt="Konum ikonu" loading="lazy">
+                <h3>Konum</h3>
                 <div class="contact-divider"></div>
                 <p>
                     <a href="https://www.google.com/maps?q=Mansuroğlu+Mah.+286/3+Sk.+No:+14B+Bayraklı/İzmir"
@@ -86,16 +85,16 @@
     <div class="contact-form-map">
 
         <section class="contact-form-section">
-            <h1>Leave us your info</h1>
-            <p>and we will get back to you.</p>
+            <h1>Bize Bilgilerinizi Bırakın</h1>
+            <p>ve size geri dönüş yapalım.</p>
             <form class="contact-form" id="contact-form"
                 action="https://script.google.com/macros/s/AKfycbwZ7RPa_1lMmnNPWIcd2xkYwXbkQX_1IJM9GXcNKAaO3m6YnIonwHIo4u-j1G_5Pa8HzA/exec"
                 method="POST">
-                <input type="text" name="name" placeholder="Name:" required>
-                <input type="text" name="city" placeholder="City:" required>
-                <input type="email" name="email" placeholder="Email:" required>
-                <textarea name="message" placeholder="Message:" rows="5" required></textarea>
-                <button type="submit">Submit</button>
+                <input type="text" name="name" placeholder="Ad:" required>
+                <input type="text" name="city" placeholder="Şehir:" required>
+                <input type="email" name="email" placeholder="E-posta:" required>
+                <textarea name="message" placeholder="Mesajınız:" rows="5" required></textarea>
+                <button type="submit">Gönder</button>
             </form>
 
         </section>
@@ -107,20 +106,16 @@
 
     </div>
 
-
-
     <div id="footer-placeholder"></div>
 
     <script>
-
         document.getElementById("contact-form").addEventListener("submit", async function (event) {
-            event.preventDefault(); // Prevent default form submission
+            event.preventDefault();
 
             const form = event.target;
             const formData = new FormData(form);
 
-            // Add the secret key to the form data
-            formData.append("secret", "myUniqueKey123"); // Test with a mismatched key for debugging
+            formData.append("secret", "myUniqueKey123");
 
             try {
                 const response = await fetch(form.action, {
@@ -129,18 +124,16 @@
                 });
                 const result = await response.json();
                 if (result.result === "success") {
-                    alert("Thank you! Your form has been submitted.");
-                    form.reset(); // Clear the form
+                    alert("Teşekkür ederiz! Formunuz gönderildi.");
+                    form.reset();
                 } else {
-                    alert(result.message || "There was an error submitting the form.");
+                    alert(result.message || "Form gönderilirken bir hata oluştu.");
                 }
             } catch (error) {
-                console.error("Error:", error);
-                alert("There was an error submitting the form.");
+                console.error("Hata:", error);
+                alert("Form gönderilirken bir hata oluştu.");
             }
         });
-
-
     </script>
 
 </body>
