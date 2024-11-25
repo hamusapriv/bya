@@ -499,7 +499,8 @@ section {
 
 
 .about-bg-lines {
-    display: flex;
+    display: none;
+    /*display: flex;*/
     justify-content: space-around;
     position: absolute;
     top: 0;
@@ -551,7 +552,7 @@ section {
 .about-p {
     font-size: 20px;
     width: 600px;
-    margin-top: 150px;
+    margin-top: 200px;
 }
 
 @media (max-width: 768px) {
